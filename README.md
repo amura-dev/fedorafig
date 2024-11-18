@@ -89,6 +89,6 @@ This project is licensed under the terms of the [Unlicense](LICENSE) license.
 ## Contact
 My contact details are listed in my profile.
 
-LinkedIn: [linkedin.com/in/andrei-murashev](linkedin.com/in/andrei-murashev)
+LinkedIn: [linkedin.com/in/andrei-murashev](https://www.linkedin.com/in/andrei-murashev)
 
 Gmail: [andrei.murashev.1@gmail.com](andrei.murashev.1@gmail.com)
