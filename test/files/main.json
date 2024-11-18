@@ -1,0 +1,34 @@
+{
+  "hello.txt": {
+    "syspath": "~",
+    "cfgpath": "hello.txt"
+  },
+
+  "neofetch": {
+    "syspath": "~/.config/neofetch/",
+    "cfgpath": "neofetch/",
+    "package": "neofetch"
+  },
+
+  "freetuxtv": {
+    "syspath": "~/.freetuxtv",
+    "cfgpath": "freetuxtv/",
+    "package": "freetuxtv",
+    "repo": "rpmsphere"
+  },
+
+  "zellij": {
+    "syspath": "~/.config/zellij/",
+    "cfgpath": "zellij/",
+    "script": "zellij.sh"
+  },
+
+  "telegram": {
+    "package": "telegram-desktop",
+    "repo": "rpmfusion-free"
+  },
+
+  "hello.sh": {
+    "script": "hello.sh"
+  }
+}

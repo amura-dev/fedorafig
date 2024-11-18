@@ -1,0 +1,527 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="oAJnSLCfP1lTFo9uhZ9o">
+    <mxGraphModel dx="3340" dy="1694" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7XG6AXlFukiM5lTxaueu-4" value="fedorafig run" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="560" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-5" target="7XG6AXlFukiM5lTxaueu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-5" value="copy repos to /etc/yum.repos.d/" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="40" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-6" target="7XG6AXlFukiM5lTxaueu-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-6" value="change owner to root and permissions to 644" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="40" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-9" target="7XG6AXlFukiM5lTxaueu-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-9" value="get list of packages and their respective repositories" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="40" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-12" target="7XG6AXlFukiM5lTxaueu-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-12" value="for package in packages:" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="40" y="410" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-12" source="7XG6AXlFukiM5lTxaueu-11" target="7XG6AXlFukiM5lTxaueu-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-21" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-18">
+          <mxGeometry x="-0.1714" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-12" source="7XG6AXlFukiM5lTxaueu-11" target="7XG6AXlFukiM5lTxaueu-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-20" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-19">
+          <mxGeometry x="0.3552" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-11" value="package has corresponding repo?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-12">
+          <mxGeometry x="40" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-15" value="sudo dnf install $PKG" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-12">
+          <mxGeometry x="200" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-17" value="sudo dnf install $PKG&lt;div&gt;--enablerepo=$REPO&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-12">
+          <mxGeometry x="40" y="120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-22" value="for package in packages:" style="swimlane;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="40" y="680" width="480" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-22" source="7XG6AXlFukiM5lTxaueu-27" target="7XG6AXlFukiM5lTxaueu-57">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-24" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-23">
+          <mxGeometry x="-0.1714" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-22" source="7XG6AXlFukiM5lTxaueu-27" target="7XG6AXlFukiM5lTxaueu-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-56" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-55">
+          <mxGeometry x="-0.1333" y="-1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-27" value="package has corresponding config path?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-22">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-28" value="skip" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-22">
+          <mxGeometry x="220" y="50" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-22" source="7XG6AXlFukiM5lTxaueu-57" target="7XG6AXlFukiM5lTxaueu-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-61" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-60">
+          <mxGeometry x="-0.0222" y="-1" relative="1" as="geometry">
+            <mxPoint x="-5" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-22" source="7XG6AXlFukiM5lTxaueu-57" target="7XG6AXlFukiM5lTxaueu-63">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="220" />
+              <mxPoint x="380" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-66" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-64">
+          <mxGeometry x="0.0061" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-57" value="does `syspath` exist?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-22">
+          <mxGeometry x="40" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-22" source="7XG6AXlFukiM5lTxaueu-59" target="7XG6AXlFukiM5lTxaueu-63">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340.0000000000002" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-59" value="make `syspath`" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-22">
+          <mxGeometry x="220" y="150" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-63" value="move all in `cfgpath` to `syspath`" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-22">
+          <mxGeometry x="340" y="140" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-30" target="7XG6AXlFukiM5lTxaueu-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-30" value="calculate checksum for `~/.config/fedorafig`" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="200" y="130" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-31" target="7XG6AXlFukiM5lTxaueu-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-38" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-37">
+          <mxGeometry x="-0.2429" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-31" target="7XG6AXlFukiM5lTxaueu-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-42" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-40">
+          <mxGeometry x="-0.2865" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-31" value="does checksum exist?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="230" y="210" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-33" target="7XG6AXlFukiM5lTxaueu-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="270" />
+              <mxPoint x="510" y="110" />
+              <mxPoint x="100" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-49" value="no error" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-44">
+          <mxGeometry x="-0.7967" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-33" value="`fedorafig check`" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="390" y="250" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-36" target="7XG6AXlFukiM5lTxaueu-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-43" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-41">
+          <mxGeometry x="-0.3262" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-36" target="7XG6AXlFukiM5lTxaueu-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="310" />
+              <mxPoint x="180" y="110" />
+              <mxPoint x="100" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-48" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-47">
+          <mxGeometry x="-0.8652" y="1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-36" value="is new checksum the same as it?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="230" y="290" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-4" source="7XG6AXlFukiM5lTxaueu-45" target="7XG6AXlFukiM5lTxaueu-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-45" value="Entry point" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-4">
+          <mxGeometry x="240" y="60" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-50" value="fedorafig check" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" vertex="1" parent="1">
+          <mxGeometry x="640" y="40" width="660" height="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-51" target="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-51" value="read main.json file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="275" y="80" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-165" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-52" target="7XG6AXlFukiM5lTxaueu-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-52" value="for entry in json:" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="40" y="160" width="560" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-67" target="7XG6AXlFukiM5lTxaueu-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-76" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-75">
+          <mxGeometry x="0.0844" relative="1" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-67" target="7XG6AXlFukiM5lTxaueu-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-95" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-94">
+          <mxGeometry x="-0.0889" y="-1" relative="1" as="geometry">
+            <mxPoint x="-2" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-67" value="does entry have&lt;div&gt;`syspath` and `cfgpath`?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="20" y="160" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-68" target="7XG6AXlFukiM5lTxaueu-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-87" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-86">
+          <mxGeometry x="-0.1289" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-68" target="7XG6AXlFukiM5lTxaueu-89">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-90" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-88">
+          <mxGeometry x="-0.0889" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-68" value="does entry have&lt;div&gt;`repo`?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="210" y="160" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-72" target="7XG6AXlFukiM5lTxaueu-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-104" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-103">
+          <mxGeometry x="-0.171" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-72" target="7XG6AXlFukiM5lTxaueu-156">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-160" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-158">
+          <mxGeometry x="-0.5129" relative="1" as="geometry">
+            <mxPoint x="-1" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-72" value="does entry have `package`?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="210" y="270" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-73" target="7XG6AXlFukiM5lTxaueu-105">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="330" />
+              <mxPoint x="70" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-114" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-106">
+          <mxGeometry x="-0.2923" y="2" relative="1" as="geometry">
+            <mxPoint x="-2" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-73" target="7XG6AXlFukiM5lTxaueu-153">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-157" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-154">
+          <mxGeometry x="-0.5238" y="-1" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-73" value="are they valid directory paths?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="20" y="270" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-77" target="7XG6AXlFukiM5lTxaueu-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-111" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-110">
+          <mxGeometry x="-0.1785" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-77" target="7XG6AXlFukiM5lTxaueu-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-113" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-112">
+          <mxGeometry x="0.1161" y="-1" relative="1" as="geometry">
+            <mxPoint x="9" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-77" value="does entry have `script`?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="440" y="160" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-78" target="7XG6AXlFukiM5lTxaueu-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-78" target="7XG6AXlFukiM5lTxaueu-68">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="120" />
+              <mxPoint x="260" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-78" target="7XG6AXlFukiM5lTxaueu-77">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="120" />
+              <mxPoint x="490" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-92" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-85">
+          <mxGeometry x="-0.923" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-78" target="7XG6AXlFukiM5lTxaueu-97">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-98" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-96">
+          <mxGeometry x="-0.0444" y="-2" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-78" value="entry blank?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="20" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-89" value="pass" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="350" y="170" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-93" value="pass" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="160" y="170" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-97" value="continue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="200" y="45" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-100" value="Syntax error" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="210" y="360" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-105" value="Path error" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="20" y="360" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-107" target="7XG6AXlFukiM5lTxaueu-108">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="340" />
+              <mxPoint x="490" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-115" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-109">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-52" source="7XG6AXlFukiM5lTxaueu-107" target="7XG6AXlFukiM5lTxaueu-156">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-161" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-159">
+          <mxGeometry x="-0.4493" y="1" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-107" value="is the file path valid?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="440" y="270" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-108" value="Path error" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="440" y="360" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-153" value="continue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="120" y="330" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-156" value="continue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-52">
+          <mxGeometry x="340" y="330" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-116" target="7XG6AXlFukiM5lTxaueu-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-116" value="make /etc/yum.repos.d/ backup in /tmp" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="40" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-117" target="7XG6AXlFukiM5lTxaueu-118">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-117" value="move repos/ content to /etc/yum.repos.d" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="40" y="760" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-118" target="7XG6AXlFukiM5lTxaueu-124">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-118" value="activate all repositories" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="60" y="850" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-119" target="7XG6AXlFukiM5lTxaueu-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-119" value="Entry point" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="100" y="80" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-124" target="7XG6AXlFukiM5lTxaueu-126">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-130" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-127">
+          <mxGeometry x="-0.0952" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-124" value="does an error arise?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="220" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-126" target="7XG6AXlFukiM5lTxaueu-128">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-126" value="delete all repositories in /etc/yum.repos.d" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="220" y="760" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-128" target="7XG6AXlFukiM5lTxaueu-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-128" value="restore repos backup in /tmp" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="220" y="850" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-167" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-50" source="7XG6AXlFukiM5lTxaueu-133" target="7XG6AXlFukiM5lTxaueu-166">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="1000" />
+              <mxPoint x="320" y="1000" />
+              <mxPoint x="320" y="920" />
+              <mxPoint x="180" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-133" value="for entry in json:" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="380" y="660" width="240" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-133" source="7XG6AXlFukiM5lTxaueu-134" target="7XG6AXlFukiM5lTxaueu-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-137" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-136">
+          <mxGeometry x="-0.0786" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-133" source="7XG6AXlFukiM5lTxaueu-134" target="7XG6AXlFukiM5lTxaueu-138">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-140" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-139">
+          <mxGeometry x="-0.1143" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-134" value="does entry have `package`?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-133">
+          <mxGeometry x="20" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-135" value="continue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-133">
+          <mxGeometry x="160" y="45" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-133" source="7XG6AXlFukiM5lTxaueu-138" target="7XG6AXlFukiM5lTxaueu-141">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-138" value="`dnf info` the package" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-133">
+          <mxGeometry x="30" y="130" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-150" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-133" source="7XG6AXlFukiM5lTxaueu-141" target="7XG6AXlFukiM5lTxaueu-149">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-151" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-150">
+          <mxGeometry x="0.562" y="-1" relative="1" as="geometry">
+            <mxPoint x="-2" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-163" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7XG6AXlFukiM5lTxaueu-133" source="7XG6AXlFukiM5lTxaueu-141" target="7XG6AXlFukiM5lTxaueu-162">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-164" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7XG6AXlFukiM5lTxaueu-163">
+          <mxGeometry x="0.0886" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-141" value="is exit code 0?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=50;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-133">
+          <mxGeometry x="30" y="210" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-149" value="Syntax error" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-133">
+          <mxGeometry x="130" y="135" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-162" value="continue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-133">
+          <mxGeometry x="140" y="250" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7XG6AXlFukiM5lTxaueu-166" value="generate checksum for `~/.config/fedorafig`" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7XG6AXlFukiM5lTxaueu-50">
+          <mxGeometry x="100" y="960" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

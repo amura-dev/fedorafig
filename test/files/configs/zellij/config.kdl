@@ -1,0 +1,36 @@
+# ~/.config/zellij/config.kdl
+
+# General settings for Zellij
+[window]
+# Window title (shows up in the terminal)
+title = "My Custom Zellij"
+
+# Enable mouse support
+mouse = true
+
+# Enable automatic window splitting
+auto_split = true
+
+# Set the starting layout for splits
+default_layout = "horizontal"
+
+# Set the default size of the panes
+default_size = { width = 60, height = 15 }
+
+# Key bindings customization
+[bindings]
+# Set the leader key for zellij
+leader = "ctrl+a"
+
+# Key bindings for new windows and panes
+new_window = "ctrl+shift+n"
+new_pane = "ctrl+shift+v"
+
+# Custom key for switching between panes
+switch_pane = "ctrl+shift+h"
+
+# Setting default plugins (for example, Zellij's "tabbar")
+[plugins]
+# Enable the Tabbar plugin
+tabbar_enabled = true
+
