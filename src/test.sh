@@ -2,3 +2,4 @@
 
 fedorafig
 fedorafig check
+fedorafig run

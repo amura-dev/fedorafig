@@ -4,6 +4,12 @@
     "cfgpath": "hello.txt"
   },
 
+  "htop": {
+    "syspath": "",
+    "cfgpath": "",
+    "package": "htop"
+  },
+
   "neofetch": {
     "syspath": "~/.config/neofetch/",
     "cfgpath": "neofetch/",

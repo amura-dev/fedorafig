@@ -1,24 +1,24 @@
 import os
 import json
 import hashlib
-import subprocess
 
+from bash import exec_script
 from errors import PathError, SyntaxError
 
 
 
 class Checker():
-  def __init__(self, cfg_path, bin_path):
+  def __init__(self, cfg_path, src_path):
     self.cfg_path = cfg_path
-    self.bin_path = bin_path
-    self.cfg_main = os.path.join(cfg_path, 'main.json')
+    self.src_path = src_path
+    self.main_cfg = os.path.join(cfg_path, 'main.json')
 
 
-  def cfg_main_check(self):
-    if not (os.path.exists(self.cfg_main) and os.path.isfile(self.cfg_main)):
-      raise PathError(f"File not found {self.cfg_main}")
+  def main_cfg_check(self):
+    if not (os.path.exists(self.main_cfg) and os.path.isfile(self.main_cfg)):
+      raise PathError(f"File not found {self.main_cfg}")
 
-    with open(self.cfg_main, 'r') as fh:
+    with open(self.main_cfg, 'r') as fh:
       print("DEBUG: Loading `main.json`...")
       data = json.load(fh)
       if not isinstance(data, dict):
@@ -30,17 +30,28 @@ class Checker():
           raise SyntaxError(f"In `main.json`: Outermost value must be `dict`")
 
         print("DEBUG: Checking `cfgpath` syntax...")
-        if 'cfgpath' in entry and entry['cfgpath'] != '':
-          if 'syspath' not in entry or entry['syspath'] == '':
+        if 'cfgpath' in entry:
+          if 'syspath' not in entry:
             raise SyntaxError(f"In `main.json`: `syspath` must accompany the `cfgpath`: {entry['cfgpath']}")
+            
+          if entry['cfgpath'] != '' and entry['syspath'] != '':
+            cfgpath = os.path.join(self.cfg_path, 'configs', entry['cfgpath'])
+            if not os.path.exists(cfgpath):
+              raise PathError(f"`cfgpath` not found: {cfgpath}")
+            # No need to check syspath because it will be created anyway
+
+          elif entry['cfgpath'] == '' and entry['syspath'] == '':
+            pass
+          else:
+            raise SyntaxError(f"`cfgpath` and `syspath` must either both be blank or specified: {cfgpath}")
 
           path = f'{self.cfg_path}/configs/{entry['cfgpath']}'
           if not os.path.exists(path):
             raise PathError(f"In `main.json`: `cfgpath` not found: {entry['cfgpath']}")
 
         print("DEBUG: Checking `repo` syntax...")
-        if 'repo' in entry and entry['repo'] != '':
-          if 'package' not in entry or entry['package'] == '':
+        if 'repo' in entry:
+          if 'package' not in entry:
             raise SyntaxError(f"In `main.json`: `repo` must be accompanied by `package`")
           if not self.repo_exists(entry['repo']):
             raise SyntaxError(f"In `main.json`: `repo` not found: {entry['repo']}")
@@ -69,7 +80,7 @@ class Checker():
   def pkgs_check(self):
     print("DEBUG: Checking existence of packages...")
     pkgs = []
-    with open(self.cfg_main, 'r') as fh:
+    with open(self.main_cfg, 'r') as fh:
       data = json.load(fh)
       for entry in data.values():
         if 'package' in entry:
@@ -80,17 +91,7 @@ class Checker():
         print(f"DEBUG: Package: `{pkg}`.")
         fh.write(f'{pkg}\n')
 
-    self.exec_script('pkgs_check.sh')
-
-
-  def exec_script(self, script_name):
-    path = f'{self.bin_path}/{script_name}'
-    env = os.environ.copy()
-    env['FEDORAFIG_CFG_PATH'] = self.cfg_path
-    env['FEDORAFIG_BIN_PATH'] = self.bin_path
-
-    subprocess.run(['chmod', 'u+x', path], check=False)
-    subprocess.run(['bash', path], env=env, check=False)
+    exec_script('pkgs_check.sh')
 
 
   def get_checksum(self):

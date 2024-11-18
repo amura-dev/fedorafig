@@ -4,7 +4,8 @@ FROM fedora:40
 RUN \
   dnf install -y \
   python3 \
-  neovim
+  neovim \
+  ncurses
 
 # Creates a typical user scenario.
 RUN \
@@ -12,9 +13,11 @@ RUN \
   echo 'user:sudo' | chpasswd && \
   usermod -aG wheel user
 USER user
+WORKDIR /home/user
 ENV USER=user
 ENV HOME=/home/user
-WORKDIR /home/user
+ENV FEDORAFIG_SRC_PATH=/home/user/bin/fedorafig-src
+ENV FEDORAFIG_CFG_PATH=/home/user/.config/fedorafig
 
 
 # Copies files and configures `fedorafig` with the test configuration.
@@ -29,8 +32,8 @@ RUN \
   echo 'sudo' | sudo -S chown -R user:user "$HOME"                && \
   chmod u+x bin/fedorafig-src/main.py                             && \
   ln -s "$HOME"/bin/fedorafig-src/main.py "$HOME"/bin/fedorafig   && \
-  chmod u+x .config/fedorafig/test.sh
+  chmod u+x bin/fedorafig-src/test.sh
 
 # Runs tests.
-CMD ["/home/user/.config/fedorafig/test.sh"]
-# CMD ["bash"]
+# CMD ["/home/user/bin/fedorafig-src/test.sh"]
+CMD ["bash"]
