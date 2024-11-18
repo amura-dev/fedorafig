@@ -1,4 +1,4 @@
-# fedorafig v0.0.1
+# fedorafig
 
 <img alt="version static badge" src="https://img.shields.io/badge/version-0.0.1-red" height=25> <img alt="unlicense license static badge" src="https://img.shields.io/badge/license-Unlicense-blue" height="25"> <img alt="issues static badge" src="https://img.shields.io/github/issues/amura-dev/fedorafig" height="25"> <img alt="stars" src=https://img.shields.io/github/stars/amura-dev/fedorafig height="25">
 
@@ -7,7 +7,7 @@ Have you ever had to go through the tedious task of writing your own configurati
 
 ## Table of Contents
 
-- [About the project](#about-the-project)
+- [About](#about)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -17,7 +17,7 @@ Have you ever had to go through the tedious task of writing your own configurati
 - [Contact](#contact)
 
 
-## About the project
+## About
 
 `fedorafig` is a powerful and user-friendly configuration management utility designed specifically for Fedora Linux systems. It automates the process of configuring your system by allowing you to define the paths for configuration files, the packages you need (from specific repositories if necessary), and any post-installation scripts to be executed.
 
@@ -39,7 +39,12 @@ Runs the configuration by first installing all specfied packages, then scripts, 
 ## Installation
 Simply execute the following command in your terminal
 ```bash
-git clone https://github.com/your-username/your-repo.git # will add later
+rm -rf fedorafig || true
+git clone https://github.com/amura-dev/fedorafig
+cd fedorafig
+chmod u+x install.sh
+bash install.sh
+cd .. && rm -rf fedorafig
 ```
 
 ## Usage
@@ -70,6 +75,7 @@ By automatic scripts, I mean scripts that execute due to a certain system trigge
 
 
 ## FAQ
+Not much to ask about at the moment.
 
 
 ## Contributing
