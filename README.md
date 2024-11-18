@@ -1,6 +1,6 @@
 # fedorafig
 
-<img alt="version static badge" src="https://img.shields.io/badge/version-0.0.1-red" height=25> <img alt="unlicense license static badge" src="https://img.shields.io/badge/license-Unlicense-blue" height="25"> <img alt="issues static badge" src="https://img.shields.io/github/issues/amura-dev/fedorafig" height="25"> <img alt="stars" src=https://img.shields.io/github/stars/amura-dev/fedorafig height="25">
+<img alt="version static badge" src="https://img.shields.io/badge/version-0.0.1-blue" height=25> <img alt="unlicense license static badge" src="https://img.shields.io/badge/license-Unlicense-red" height="25"> <img alt="issues static badge" src="https://img.shields.io/github/issues/amura-dev/fedorafig?color=yellow" height="25"> <img alt="stars" src="https://img.shields.io/github/stars/amura-dev/fedorafig?color=white" height="25">
 
 Have you ever had to go through the tedious task of writing your own configuration script for you Fedora Linux system? I have, and I didn't like it, which is why I made this utility for myself and perhaps it can help you too. `fedorafig` is a one-stop shop configuration utility for Fedora Linux. All you have to do is specify the configuration paths and their destinations, specify the packages, from a specific repository if needed, and/or the (post-)install scripts. Run the utility, and you're good to go.
 
