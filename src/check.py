@@ -2,7 +2,7 @@ import os
 import json
 import hashlib
 
-from bash import exec_script
+from bash import exec_script, exec_cmd
 from errors import PathError, SyntaxError
 
 
@@ -85,7 +85,7 @@ class Checker():
       for entry in data.values():
         if 'package' in entry:
           pkgs.append(entry['package'])
-    
+
     with open('/tmp/fedorafig-packages.txt', 'w+') as fh:
       for pkg in pkgs:
         print(f"DEBUG: Package: `{pkg}`.")
@@ -93,6 +93,19 @@ class Checker():
 
     exec_script('pkgs_check.sh')
 
+    '''
+    repos_dir = '/etc/yum.repos.d/'
+    for file in os.listdir(repos_dir):
+      path = os.path.join(repos_dir, file)
+      with open(path, 'r') as fh:
+        for line in fh:
+          baseurl = ''
+          if line.find('baseurl=') != -1:
+            baseurl = line[line.find('=')+1:].strip()
+            print(f"DEBUG: Base url: {baseurl}")
+          if baseurl != '':
+            exec_cmd(f'sudo rpm --import {baseurl}')
+    '''
 
   def get_checksum(self):
     hasher = hashlib.sha256()

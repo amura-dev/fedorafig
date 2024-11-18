@@ -35,5 +35,4 @@ RUN \
   chmod u+x bin/fedorafig-src/test.sh
 
 # Runs tests.
-# CMD ["/home/user/bin/fedorafig-src/test.sh"]
-CMD ["bash"]
+CMD ["/home/user/bin/fedorafig-src/test.sh"]
