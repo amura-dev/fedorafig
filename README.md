@@ -19,12 +19,9 @@ Have you ever had to go through the tedious task of writing your own configurati
 
 ## About
 
-`fedorafig` is a powerful and user-friendly configuration management utility designed specifically for Fedora Linux systems. It automates the process of configuring your system by allowing you to define the paths for configuration files, the packages you need (from specific repositories if necessary), and any post-installation scripts to be executed.
+`fedorafig` is a powerful and user-friendly configuration management utility designed specifically for Fedora Linux systems. It automates the process of configuring your system by allowing you to define the paths for configuration files, the packages you need (from specific repositories if necessary), and any installation or post-installation scripts to be executed.
 
-I created `fedorafig` to streamline the configuration process that often requires tedious manual steps. Instead of manually copying files, installing packages, and running scripts, `fedorafig` simplifies these tasks into a single command. This project aims to reduce the setup time for Fedora Linux systems, making them easier to configure and maintain.
-
-Whether you're setting up a new machine or managing configurations across multiple systems, `fedorafig` provides an efficient, reusable solution for automating your workflow.
-
+Currently, testing involves starting a Fedora 40 Docker container and applying the example configuration in [test/files/](test/files). The packages that are installed and whose configuration is changed are [neofetch](https://github.com/dylanaraps/neofetch), [zellij](https://github.com/zellij-org/zellij), and [freetuxtv](https://github.com/freetuxtv/freetuxtv) as their configuration effects are easier and more convenient to observe, though this is subject to change.
 
 
 ## Features
