@@ -26,13 +26,18 @@ def main():
 
     subparsers = parser.add_subparsers(title="Commands", dest='command')
     
-    run_help = """RUN"""
+    run_help = """
+Installs packages (from a particular repository if specified,
+does not need to be enabled), runs installation scripts, and
+moves all configuration files to the specified location on
+the system."""
     run_parser = subparsers.add_parser('run', help=run_help)
     run_parser.set_defaults(func=run)
 
     check_help = """
-    Checks syntax of and paths specified in all configuration files, checks all repositories for validity and all packages specified.
-    """
+Checks syntax of and paths specified in all configuration
+files, checks all repositories for validity and the
+existence of all specified packages"""
     check_parser = subparsers.add_parser('check', help=check_help)
     check_parser.set_defaults(func=check)
 
@@ -79,6 +84,14 @@ def run(args):
   print("Installing packages...")
   RUNNER.install_pkgs()
   print("Done.")
+
+  print("Running install scripts...")
+  RUNNER.run_scripts()
+  print("Done.")
+
+  print("Moving configuration files...")
+  RUNNER.mv_cfgs()
+  print("Done")
 
 
 # TODO: implement archives
