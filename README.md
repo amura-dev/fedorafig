@@ -1,8 +1,6 @@
 # fedorafig v0.0.1
 
-![License](https://img.shields.io/github/license/your-username/your-repo)
-![Issues](https://img.shields.io/github/issues/your-username/your-repo)
-![Stars](https://img.shields.io/github/stars/your-username/your-repo)
+<img alt="version static badge" src="https://img.shields.io/badge/version-0.0.1-red" height=25> <img alt="unlicense license static badge" src="https://img.shields.io/badge/license-Unlicense-blue" height="25"> <img alt="issues static badge" src="https://img.shields.io/github/issues/amura-dev/fedorafig" height="25"> <img alt="stars" src=https://img.shields.io/github/stars/amura-dev/fedorafig height="25">
 
 Have you ever had to go through the tedious task of writing your own configuration script for you Fedora Linux system? I have, and I didn't like it, which is why I made this utility for myself and perhaps it can help you too. `fedorafig` is a one-stop shop configuration utility for Fedora Linux. All you have to do is specify the configuration paths and their destinations, specify the packages, from a specific repository if needed, and/or the (post-)install scripts. Run the utility, and you're good to go.
 
@@ -21,10 +19,12 @@ Have you ever had to go through the tedious task of writing your own configurati
 
 ## About the project
 
-Provide a short introduction to your project:
-- What does it do?
-- Why did you create it?
-- What problem does it solve?
+`fedorafig` is a powerful and user-friendly configuration management utility designed specifically for Fedora Linux systems. It automates the process of configuring your system by allowing you to define the paths for configuration files, the packages you need (from specific repositories if necessary), and any post-installation scripts to be executed.
+
+I created `fedorafig` to streamline the configuration process that often requires tedious manual steps. Instead of manually copying files, installing packages, and running scripts, `fedorafig` simplifies these tasks into a single command. This project aims to reduce the setup time for Fedora Linux systems, making them easier to configure and maintain.
+
+Whether you're setting up a new machine or managing configurations across multiple systems, `fedorafig` provides an efficient, reusable solution for automating your workflow.
+
 
 
 ## Features
@@ -35,11 +35,6 @@ Checks the syntax of all configuration files and the paths specified in them. It
 ### `run`
 Runs the configuration by first installing all specfied packages, then scripts, and moves all specified configurations into their respective locations.
 
-### To be added
-- `base`: Saves the initial "image" of the configurations for restoration purposes
-- `archive`: Saves current "image" to be restored to later if needed. The methods will also be implemented to automatically install/uninstall and add/remove packages and files specified in new configurations depending on how they differ from older configurations.
-- Setup of automatic scripts: By automatic scripts, I mean scripts that execute due to a certain system trigger, like after logging in or before shutting down. They will be easily configurable in a separate configuration path and how their own directory.
-
 
 ## Installation
 Simply execute the following command in your terminal
@@ -48,15 +43,46 @@ git clone https://github.com/your-username/your-repo.git # will add later
 ```
 
 ## Usage
+```bash
+Commands:
+  {run,check}
+    run        
+               Installs packages (from a particular repository if specified,
+               does not need to be enabled), runs installation scripts, and
+               moves all configuration files to the specified location on
+               the system.
+    check      
+               Checks syntax of and paths specified in all configuration
+               files, checks all repositories for validity and the
+               existence of all specified packages
+```
+
+## Upcoming features
+
+### `base`
+Saves the initial "image" of the configurations for restoration purposes.
+
+### `archive`
+`archive`: Saves current "image" to be restored to later if needed. The methods will also be implemented to automatically install/uninstall and add/remove packages and files specified in new configurations depending on how they differ from older configurations.
+
+### Set-up of automatic scripts
+By automatic scripts, I mean scripts that execute due to a certain system trigger, like after logging in or before shutting down. They will be easily configurable in a separate configuration path and how their own directory.
 
 
 ## FAQ
 
 
 ## Contributing
+This is currently a project that I am working on independently. It will definititely be open to contributions by the first full release.
 
 
 ## License
+This project is licensed under the terms of the [Unlicense](LICENSE) license.
 
 
 ## Contact
+My contact details are listed in my profile.
+
+LinkedIn: [linkedin.com/in/andrei-murashev](linkedin.com/in/andrei-murashev)
+
+Gmail: [andrei.murashev.1@gmail.com](andrei.murashev.1@gmail.com)
